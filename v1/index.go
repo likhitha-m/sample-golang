@@ -9,7 +9,10 @@ import (
 
 func InitializeRoutes(e *echo.Group) {
 	e.GET("/health", controllers.HealthCheck)
-	//Credits Group
+	//Cities Group
 	gCities := e.Group("/cities")
 	CitiesGroup(gCities)
+
+	// gFavorites := e.Group("/favorites")
+	// FavoritesGroup(gFavorites)
 }
